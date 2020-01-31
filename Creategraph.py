@@ -23,8 +23,77 @@ def add_graph():
                     s2 = input("Whats the link ??")
                     g[j].append((s2, i))
 
+#add_graph()
 
+def creategraphs():
+    g = []
 
+    shop = open("DecisionalTree/shop.txt", "r")
+    l = shop.readlines()
 
-add_graph()
+    sh = [(l[0], [], [])]
+    second = []
 
+    count = 1
+    while count < 8:
+        second.append(l[count])
+        count+=1
+
+    count+=1
+    third = []
+
+    while count < len(l):
+        third.append(l[count])
+        count +=1
+
+    sh[0][1].append(second)
+    sh[0][2].append(third)
+    g.append(sh)
+
+    info = open("DecisionalTree/informations.txt", "r")
+    l = info.readlines()
+
+    inf = [(l[0], [], [])]
+    second = []
+
+    count = 1
+    while count < 4:
+        second.append(l[count])
+        count += 1
+
+    count += 1
+    third = []
+
+    while count < len(l):
+        third.append(l[count])
+        count += 1
+
+    inf[0][1].append(second)
+    inf[0][2].append(third)
+    g.append(inf)
+
+    video = open("DecisionalTree/video.txt", "r")
+    l = video.readlines()
+
+    vid = [(l[0], [], [])]
+    second = []
+
+    count = 1
+    while count < 4:
+        second.append(l[count])
+        count += 1
+
+    count += 1
+    third = []
+
+    while count < len(l):
+        third.append(l[count])
+        count+=1
+
+    vid[0][1].append(second)
+    vid[0][2].append(third)
+    g.append(vid)
+
+    return g
+
+creategraphs()
