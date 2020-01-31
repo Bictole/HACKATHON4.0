@@ -20,7 +20,7 @@ def add_graph():
                 print(url[i])
                 s = input("Is there a link ?")
                 if s == "y":
-                    s2 = input("Whats da link ??")
+                    s2 = input("Whats the link ??")
                     g[j].append((s2, i))
 
 
