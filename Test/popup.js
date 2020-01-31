@@ -1,25 +1,12 @@
 window.onload = function () {
 
-
-    var txt = document.getElementById("txt");
-
-    var cow = document.getElementById("cow");
-    var mutton = document.getElementById("mutton");
-    var chicken = document.getElementById("chicken");
-    cow.addEventListener("click", Wcow);
-    mutton.addEventListener("click", Wmutton);
-    chicken.addEventListener("click", Wchicken);
-    function Wcow()
+    var begin = document.getElementById("begin");
+    
+    begin.addEventListener("click", Wbegin);
+    
+    function Wbegin()
     {
-        txt.value += "+ cow ";
+        window.open("beginning.html","Start");
     }
-    function Wmutton() {
-        txt.value += "+ mutton ";
-    }
-    function Wchicken()
-    {
-        txt.value += "+ chicken ";
-    }
-
-
+   
 }
