@@ -1,17 +1,43 @@
 
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400);
+#back
+{
+  height: 200px;
+}
 body{
   font-family: 'Source Sans Pro', sans-serif;
   font-weight:300;
   background-color:lightblue;
   color:#FFF;
   text-align: center;
-  margin-top: 200px;
+  margin-top: 145px;
+  
 }
+.image{
+	text-align: left;
+	float: left;
+
+}
+.titre{
+  color: white;
+  text-align: center;
+  font-family: Courier;
+  font-size: 2.8em;
+  text-decoration: underline;
+  padding-top: 319px;
+}
+
 section{
   text-align:center;
 }
 input{
 	width: 200px;
 	height: 200px;
+}
+
+footer{
+	height:80px;
+	padding-top:20px;
+	text-align:center;
+	background-color:silver;
+	font-size: 1.5em;
 }
