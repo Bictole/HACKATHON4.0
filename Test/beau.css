@@ -1,5 +1,17 @@
+
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400);
 body{
-    width:100px;
-    min-height=300px;
-    margin:0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight:300;
+  background-color:lightblue;
+  color:#FFF;
+  text-align: center;
+  margin-top: 200px;
+}
+section{
+  text-align:center;
+}
+input{
+	width: 200px;
+	height: 200px;
 }

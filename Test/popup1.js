@@ -17,10 +17,10 @@ window.onload = function () {
 
     function Wvideogame()
     {
-        window.open("https://www.shutterstock.com/fr/video?kw=buy%20video&utm_source=bing&utm_source=bing&utm_medium=cpc&utm_medium=cpc&msclkid=a757a0ea966f14f30323fedee5c10f89&utm_campaign=IN_en_footage_generic&utm_term=buy%20video&utm_content=video_buy_exact&gclid=CITEudW9rucCFclejgodZcMDyw&gclsrc=ds","videogame");
+        window.open("https://www.amazon.fr/jeux-video-consoles-portables-accessoires-pc/b?node=530490","videogame");
     }
     function Wvideo() {
-        window.open("https://store.steampowered.com/","Video");
+        window.open("https://play.google.com/store/movies?hl=fr","Video");
     }
     function Wcloth()
     {
