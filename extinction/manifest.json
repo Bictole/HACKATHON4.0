@@ -1,0 +1,14 @@
+{
+	"name" : "Tigger Team",
+	"description" : "Hackathon",
+	"version" : "1.0.0",
+	"background" : {
+		"scripts" :["background.js"],
+		"persistent" : true
+	},
+	"browser_action" : {
+		"default_popup" : "popup.html"
+	},
+	"permissions" : ["webNavigation"],
+	"manifest_version": 2
+}

@@ -1,0 +1,21 @@
+body{
+	width: 450px;
+	min-height: 500px;
+	margin: 0;
+}
+
+.title{
+	background-color: #222222;
+	width: 100%;
+	padding: 10px;
+}
+.title > h1{
+	color: white;
+	font-weight: 100;
+	margin: 0;
+}
+
+.js{
+	color: black;
+	
+}
