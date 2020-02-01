@@ -1,29 +1,7 @@
 window.onload = function () {
     var res = " ";
     var quality = " ";
-    var shopping = document.getElementById("shopping");
-    var video = document.getElementById("video");
-
-    var info = document.getElementById("informations");
-    if(shopping){shopping.addEventListener("click", Wshopping);}
-    if(video){video.addEventListener("click", Wvideo);}
-    if(info){info.addEventListener("click", Winfo);}
-
-    function d(img){
-     // Load the model.
-        mobilenet.load().then(model => {
-    // Classify the image.
-    model.classify(img).then(predictions => {
-      console.log('Predictions: ');
-      console.log(predictions);
-      document.getElementById(im) = predictions;  
-    });
-  });
-        
-    }
-    function Wshopping()
-    {
-        res = d(shopping);
+    
 
 
     var informations = document.getElementById("informations");
@@ -51,15 +29,14 @@ window.onload = function () {
     icecream.addEventListener("click", Wicecream);
 
     function d(img) {
- 
-        img.disabled = true;
-     
 
-        if (total > 1)
-        {
+        img.disabled = true;
+
+
+        if (total > 1) {
             img.checked = false;
         }
-      
+
         // Load the model.
         total += 1;
         for (var i = 0; i < 3; i++) {
@@ -72,8 +49,9 @@ window.onload = function () {
                 return predictions;
             });
         }
+
+        return res;
     }
-    return res;
     function Wshopping()
     {
         res = d(shoppin);
@@ -86,13 +64,7 @@ window.onload = function () {
     function Winformations()
     {
  
-        
-        quality = info;
-        res = d(quality);
-    }
-    // Test
-    return res;
-
+       
         res = d(informations);
     }
     function Wbeach()
