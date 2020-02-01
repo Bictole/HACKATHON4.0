@@ -29,16 +29,44 @@
 <p id="r"></p>
 <script>
     const img = document.getElementById("shopping");
-
+    var seq = "";
   // Load the model.
   mobilenet.load().then(model => {
     // Classify the image.
-    model.classify(img).then(predictions => {
-      console.log('Predictions: ');
-      console.log(predictions);
-      var pred =JSON.stringify(predictions);
-      document.getElementById("r").innerHTML = pred;
-    });
+      model.classify(img).then(predictions => {
+          console.log('Predictions: ');
+          console.log(predictions);
+          var pred = JSON.stringify(predictions);
+          var totseq = "";
+          var i = -1;
+
+          for(var j=0;j<3;j++)
+          {
+              i+=2;
+              seq = "";
+              while (i < pred.length && seq != "{\"className\":\"")
+              {
+                  seq += pred[i];
+                  i++;
+              }
+              
+              seq = "";
+              while (i < pred.length && pred[i] != "\"")
+              {
+                  seq += pred[i];
+                  i++;
+              }
+             
+              while (i < pred.length && pred[i] != "}")
+              {
+                 
+                  i++;
+              }
+             
+              totseq += seq+" ";
+          }
+          document.getElementById("r").innerHTML = totseq;
+      });
   });   
     
 </script>
