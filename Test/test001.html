@@ -36,36 +36,22 @@
       model.classify(img).then(predictions => {
           console.log('Predictions: ');
           console.log(predictions);
-          var pred = JSON.stringify(predictions);
-          var totseq = "";
-          var i = -1;
-
-          for(var j=0;j<3;j++)
+          var max = 0;
+          var index = 0;
+          
+          for (var x = 0; x<predictions.length; x++)
           {
-              i+=2;
-              seq = "";
-              while (i < pred.length && seq != "{\"className\":\"")
-              {
-                  seq += pred[i];
-                  i++;
-              }
-              
-              seq = "";
-              while (i < pred.length && pred[i] != "\"")
-              {
-                  seq += pred[i];
-                  i++;
-              }
              
-              while (i < pred.length && pred[i] != "}")
+              if(max<predictions[x].probability)
               {
-                 
-                  i++;
+                  index = x;
+                  max = predictions[x].probability;
               }
-             
-              totseq += seq+" ";
+
           }
-          document.getElementById("r").innerHTML = totseq;
+          document.getElementById("r").innerHTML = predictions[index].className;
+          
+
       });
   });   
     
