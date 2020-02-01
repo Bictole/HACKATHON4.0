@@ -9,16 +9,16 @@ window.onload = function () {
 
     function Wshopping()
     {
-        res += function(shoppin);
+        res = function(shoppin);
         
     }
     function Wvideo() {
 
-        res += function(video);
+        res = function(video);
         }
     function Winfo()
     {
-        res += function(info);
+        res = function(info);
     }
 
     function(img){
