@@ -26,6 +26,7 @@
 </script>
 
 -->
+<p id="r"></p>
 <script>
     const img = document.getElementById("shopping");
 
@@ -35,6 +36,8 @@
     model.classify(img).then(predictions => {
       console.log('Predictions: ');
       console.log(predictions);
+      var pred =JSON.stringify(predictions);
+      document.getElementById("r").innerHTML = pred;
     });
   });   
     

@@ -77,8 +77,6 @@ window.onload = function () {
     function Wshopping()
     {
         res = d(shoppin);
-        
->>>>>>> 9727d20e25c72313b0231a7226b7d84a849e0698
     }
     function Wvideo() {
 
@@ -86,14 +84,14 @@ window.onload = function () {
         }
     function Winformations()
     {
-<<<<<<< HEAD
+
         
         quality = info;
         res = d(quality);
     }
     // Test
     return res;
-=======
+
         res = d(informations);
     }
     function Wbeach()
@@ -125,5 +123,3 @@ window.onload = function () {
         res = d(icecream);
     }
   
->>>>>>> 9727d20e25c72313b0231a7226b7d84a849e0698
-}
