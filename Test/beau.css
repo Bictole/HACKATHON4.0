@@ -12,13 +12,16 @@ body{
   margin-top: 145px;
   
 }
+.rere{
+	width: 150px;
+}
 .image{
 	text-align: left;
 	float: left;
 
 }
 .titre{
-  color: white;
+  color: black;
   text-align: center;
   font-family: Courier;
   font-size: 2.8em;
@@ -33,7 +36,6 @@ input{
 	width: 200px;
 	height: 200px;
 }
-
 footer{
 	height:80px;
 	padding-top:20px;

@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Test",
-  "description": "Petit test pour l'hackathon.",
-  "version": "1.0",
+  "name": "Linked",
+  "description": "Hackathon.",
+  "version": "1.0.5",
   /*"permissions": {
     "youtube.com"
     "tmall.com"

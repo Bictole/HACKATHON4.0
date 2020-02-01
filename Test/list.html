@@ -1,0 +1,45 @@
+<html>
+	<head>
+	<title>Retrieve data from the database</title>
+	</head>
+	<body>
+
+	<ul>
+
+	<?php
+	// Connect to database server
+	mysql_connect("wordassociations.net", "user", "sesame") or die (mysql_error ());
+
+	// Select database
+	mysql_select_db("mydatabase") or die(mysql_error());
+
+	// SQL query
+	$strSQL = "SELECT * FROM people ORDER BY FirstName DESC";
+
+	// Execute the query (the recordset $rs contains the result)
+	$rs = mysql_query($strSQL);
+
+	// Loop the recordset $rs
+	while($row = mysql_fetch_array($rs)) {
+
+	   // Name of the person
+	  $strName = $row['Name'];
+
+	   // Create a link to person.php with the id-value in the URL
+	   $strLink = "<a href = 'person.php?id =" . $row['id]. >'" . $strNavn . "</a>";
+
+	    // List link
+	   echo "<li>" . $strLink . "</li>";
+
+	  }
+
+	// Close the database connection
+	mysql_close();
+	?>
+
+	</ul>
+	</body>
+	</html>
+
+
+	
