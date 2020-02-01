@@ -19,22 +19,56 @@
     <h1 style="color: black;">Hackathon</h1>
     <img id="shopping" src="doight.jpg">
     <img id="fleche" src="fleche.jpg">
+    <img id="informations" src="https://i.ytimg.com/vi/A7hTbdUu0hI/maxresdefault.jpg" />
+    <img id="beach" src="https://i.pinimg.com/originals/b0/27/f1/b027f1f05a46a6dd62a2b2f4080b8181.jpg" />
+    <img id="mountain" src="http://cdn.thinglink.me/api/image/896062799317303298/1024/10/scaletowidth/0/0/1/1/false/true?wait=true" />
+    <img id="sport" src="http://3.bp.blogspot.com/-7aEjb7qYELA/UQ3ZqDITL1I/AAAAAAAAH_o/w9pQ5XwcT0o/s1600/sportsgear.jpg" />
+    <img id="clothes" src="https://luniversdemissr.files.wordpress.com/2013/07/photo-vc3aatements-sur-cintres.jpg" />
+    <img id="car" src="https://i.ytimg.com/vi/yhN7f4WR7H4/maxresdefault.jpg" />
+    <img id="plane" src="https://cdni.rt.com/actualidad/public_images/2018.09/article/5ba5797008f3d903178b4567.jpg" />
+    <img id="icecream" src="https://cdn.pixabay.com/photo/2015/11/19/21/10/knowledge-1052010__480.jpg" />
     <p class="im"></p>
-    <input type="checkbox" id="trigger2">
-    <input type="checkbox" id="trigger">
+    <input type="checkbox" id="Tshopping">
+    <input type="checkbox" id="Tfleche">
+    <input type="checkbox" id="Tinformations">
+    <input type="checkbox" id="Tbeach">
+    <input type="checkbox" id="Tmountains">
+    <input type="checkbox" id="Tsport">
+    <input type="checkbox" id="Tclothes">
+    <input type="checkbox" id="Tcar">
+    <input type="checkbox" id="Ticecream">
+
+
     <!--<script>
         var url = "https://cdn.pixabay.com/photo/2019/04/24/21/55/cinema-4153289__480.jpg";
         document.getElementById("img").src = url;
     </script>
 
     -->
+
     <p id="r"></p>
+
     <script>
-    const img = document.getElementById("shopping");
-    const img2 = document.getElementById("fleche");
-    trigger.addEventListener("click", Wshop);
-    trigger2.addEventListener("click", Wfleche);
- 
+        const shopping = document.getElementById("shopping");
+        const fleche = document.getElementById("fleche");
+        const informations = document.getElementById("informations");
+        const beach = document.getElementById("beach");
+        const mountain = document.getElementById("mountain");
+        const sport = document.getElementById("sport");
+        const clothes = document.getElementById("clothes");
+        const car = document.getElementById("car");
+        const icecream = document.getElementById("icecream");
+
+        Tshopping.addEventListener("click", Wshop);
+        Tfleche.addEventListener("click", Wfleche);
+        Tinformations.addEventListener("click", Winformations);
+        Tbeach.addEventListener("click", Wbeach);
+        Tmountains.addEventListener("click", Wmountains);
+        Tsport.addEventListener("click", Wsport);
+        Tclothes.addEventListener("click", Wclothes);
+        Tcar.addEventListener("click", Wcar);
+        Ticecream.addEventListener("click", Wicecream);
+
     function launch(image) {
 
 
@@ -64,10 +98,31 @@
     }
     function Wshop()
     {
-        launch(img);
+        launch(shopping);
     }
     function Wfleche() {
-        launch(img2);
+        launch(fleche);
+    }
+    function Winformations() {
+        launch(informations);
+    }
+    function Wbeach() {
+        launch(beach);
+    }
+    function Wmountains() {
+        launch(mountain);
+    }
+    function Wsport() {
+        launch(shopping);
+    }
+    function Wclothes() {
+        launch(clothes);
+    }
+    function Wcar() {
+        launch(car);
+    }
+    function Wicecream() {
+        launch(icecream);
     }
 
     </script>
