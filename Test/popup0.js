@@ -1,5 +1,5 @@
 window.onload = function () {
-    var res = "";
+    var res = " ";
     var shopping = document.getElementById("shoppin");
     var video = document.getElementById("video");
     var info = document.getElementById("informations");
