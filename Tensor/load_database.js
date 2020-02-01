@@ -1,0 +1,4 @@
+
+
+
+console.log(thesaurus['Hello']);
