@@ -17,13 +17,16 @@ body{
 }
 .image{
 	text-align: left;
-	float: left;
-    
+	float: left; 
 }
-
+.image>img{
+     width:600px;
+    height:400px;
+}
 img{
     height:200px;
     width:200px;
+
 }
 .titre{
   color: black;
