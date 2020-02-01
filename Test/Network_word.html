@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+</head>
+
+<body>
+<script>
+String.prototype.format = function() {
+  a = this;
+  for (k in arguments) {
+    a = a.replace("{" + k + "}", arguments[k])
+  }
+  return a
+}
+
+var word = "welcome";
+const API_KEY = "4b8acd47-07b3-4d38-ab4d-2480c73669e9";
+var BASE_LINK = "https://api.wordassociations.net/associations/v1.0/json/search?"
+//https://api.wordassociations.net/associations/v1.0/json/search?apikey=4b8acd47-07b3-4d38-ab4d-2480c73669e9&text=welcome&lang=en
+
+const userAction = async () => {
+console.log("OK?");
+    const response = await fetch(BASE_LINK, {
+    method: "POST",
+    body: "apikey=" + API_KEY + "&text=" + word + "&lang=en",
+    headers: {
+      'Content-Type': "application/json"
+    }
+  });
+ const myJson = await response.json();
+ console.log(myJson)
+}
+</script>
+<p> response</p>
+</body>
+</html>

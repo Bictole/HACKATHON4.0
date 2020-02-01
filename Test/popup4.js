@@ -1,10 +1,11 @@
-window.onload = function (name) {
+window.onload = function () {
 
-    var shopping = document.getElementById("shopping");
+    var shopping = document.getElementById("shoppin");
     shopping.addEventListener("click", Wshopping);
     function Wshopping()
     {
-        window.open("index.html","Shopping");
+
+        window.open("index.html","shopping");
     }
 
 

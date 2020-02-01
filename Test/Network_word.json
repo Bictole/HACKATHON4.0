@@ -1,0 +1,12 @@
+POST associations/v1.0/json/search?4b8acd47-07b3-4d38-ab4d-2480c73669e9 HTTP/1.1,
+Host: api.wordassociations.net,
+Accept: */*,
+Content-Length: 28,
+Content-Type: application/x-www-form-urlencoded,
+
+text=welcome&lang=en&limit=6,
+
+
+
+ 
+ 
