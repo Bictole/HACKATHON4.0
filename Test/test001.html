@@ -14,49 +14,64 @@
 <!-- Load the MobileNet model. -->
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@1.0.0"> </script>
 </head>
-    <body>
-    
+<body>
+
     <h1 style="color: black;">Hackathon</h1>
- <img id="shopping" src="doight.jpg">
- <p class ="im"></p>
-<input type="checkbox">
-<!--<script>
-    var url = "https://cdn.pixabay.com/photo/2019/04/24/21/55/cinema-4153289__480.jpg";
-    document.getElementById("img").src = url;
-</script>
+    <img id="shopping" src="doight.jpg">
+    <img id="fleche" src="fleche.jpg">
+    <p class="im"></p>
+    <input type="checkbox" id="trigger2">
+    <input type="checkbox" id="trigger">
+    <!--<script>
+        var url = "https://cdn.pixabay.com/photo/2019/04/24/21/55/cinema-4153289__480.jpg";
+        document.getElementById("img").src = url;
+    </script>
 
--->
-<p id="r"></p>
-<script>
+    -->
+    <p id="r"></p>
+    <script>
     const img = document.getElementById("shopping");
-    var seq = "";
-  // Load the model.
-  mobilenet.load().then(model => {
-    // Classify the image.
-      model.classify(img).then(predictions => {
-          console.log('Predictions: ');
-          console.log(predictions);
-          var max = 0;
-          var index = 0;
-          
-          for (var x = 0; x<predictions.length; x++)
-          {
-             
-              if(max<predictions[x].probability)
-              {
-                  index = x;
-                  max = predictions[x].probability;
-              }
+    const img2 = document.getElementById("fleche");
+    trigger.addEventListener("click", Wshop);
+    trigger2.addEventListener("click", Wfleche);
+ 
+    function launch(image) {
 
-          }
-          document.getElementById("r").innerHTML = predictions[index].className;
-          
 
-      });
-  });   
-    
-</script>
-</br>
-  <footer><img src="doight.png"></footer>
+        // Load the model.
+        mobilenet.load().then(model => {
+            // Classify the image.
+            model.classify(image).then(predictions => {
+                console.log('Predictions: ');
+                console.log(predictions);
+                var max = 0;
+                var index = 0;
+                var trigger = 0;
+
+                for (var x = 0; x < predictions.length; x++) {
+
+                    if (max < predictions[x].probability) {
+                        index = x;
+                        max = predictions[x].probability;
+                    }
+
+                }
+                document.getElementById("r").innerHTML = predictions[index].className;
+
+
+            });
+        });
+    }
+    function Wshop()
+    {
+        launch(img);
+    }
+    function Wfleche() {
+        launch(img2);
+    }
+
+    </script>
+    </br>
+    <footer><img src="doight.png"></footer>
 </body>
 </html>

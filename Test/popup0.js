@@ -3,7 +3,7 @@ window.onload = function () {
     var quality = " ";
     
 
-
+    var shopping = document.getElementById("shopping");
     var informations = document.getElementById("informations");
     var beach = document.getElementById("beach");
     var mountain = document.getElementById("mountain");
@@ -46,7 +46,7 @@ window.onload = function () {
                     console.log('Predictions: ');
                     console.log(predictions);
                 });
-                return predictions;
+
             });
         }
 
@@ -54,7 +54,7 @@ window.onload = function () {
     }
     function Wshopping()
     {
-        res = d(shoppin);
+        res = d(shopping);
         
     }
     function Wvideo() {
