@@ -1,37 +1,40 @@
 window.onload = function () {
     var res = " ";
-    var shopping = document.getElementById("shoppin");
+    var quality = " ";
+    var shopping = document.getElementById("shopping");
     var video = document.getElementById("video");
     var info = document.getElementById("informations");
-    shopping.addEventListener("click", Wshopping);
-    video.addEventListener("click", Wvideo);
-    info.addEventListener("click", Winfo);
+    if(shopping){shopping.addEventListener("click", Wshopping);}
+    if(video){video.addEventListener("click", Wvideo);}
+    if(info){info.addEventListener("click", Winfo);}
 
+    function d(img){
+     // Load the model.
+        mobilenet.load().then(model => {
+    // Classify the image.
+    model.classify(img).then(predictions => {
+      console.log('Predictions: ');
+      console.log(predictions);
+      document.getElementById(im) = predictions;  
+    });
+  });
+        
+    }
     function Wshopping()
     {
-        res = function(shoppin);
-        
+        res = d(shopping);
+
     }
     function Wvideo() {
 
-        res = function(video);
+        res = d(video);
         }
     function Winfo()
     {
-        res = function(info);
+        
+        quality = info;
+        res = d(quality);
     }
-
-    function(img){
-     // Load the model.
-    
-        mobilenet.load().then(model => {
-        // Classify the image.
-        model.classify(img).then(predictions => {
-        console.log('Predictions: ');
-        console.log(predictions);
-            });
-        return predictions;
-         });
-    }
+    // Test
     return res;
 }
