@@ -1,6 +1,6 @@
 window.onload = function () {
 
-    var shopping = document.getElementById("shopping");
+    var shopping = document.getElementById("shoppin");
     var video = document.getElementById("video");
     var info = document.getElementById("informations");
     shopping.addEventListener("click", Wshopping);
@@ -9,7 +9,7 @@ window.onload = function () {
 
     function Wshopping()
     {
-        window.open("shop.html","Shopping");
+        window.open("index.html","Shopping");
     }
     function Wvideo() {
         window.open("video.html","Video");
