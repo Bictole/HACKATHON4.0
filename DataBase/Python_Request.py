@@ -22,11 +22,11 @@ def made_request(word):
     K = K[0]
     K = K['items']
     
-    final = []
+    out = []
     for i in K:
-        final.append(i['item'])
+        out.append(i['item'])
     
-    return final
+    return out
 
 
 

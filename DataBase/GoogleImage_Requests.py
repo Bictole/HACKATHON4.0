@@ -18,8 +18,8 @@ def GoogleImage_requests(word):
     sys.stdout = orig_stdout
     f.close()
 
-    with open('URLS.txt') as f:
-       content = f.readlines()
+    f = open('URLS.txt', 'r')
+    content = f.readlines()
     f.close()
 
     urls = []
@@ -31,3 +31,4 @@ def GoogleImage_requests(word):
     return urls
 
 GoogleImage_requests("beer")
+print("Heho")
