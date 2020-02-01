@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>CAT</title>
+
 </head>
 <body>
 <!-- Load TensorFlow.js. This is required to use MobileNet. -->
@@ -11,6 +12,9 @@
 
 <!-- Replace this with your image. Make sure CORS settings allow reading the image! -->
 <img id="img" src="cat.jpg"></img>
+<img id="img2" src="cat1.jpg"></img>
+<img id="img3" src="flower.jpg"></img>
+
 
 <!-- Place your code in the script tag below. You can also use an external .js file -->
 <script>
@@ -27,6 +31,27 @@
       console.log(predictions);
     });
   });
+  
+  // Load the model.
+  mobilenet.load().then(model => {
+    // Classify the image.
+    model.classify(img2).then(predictions => {
+      console.log('Predictions: ');
+      console.log(predictions);
+    });
+  });
+  
+  // Load the model.
+  mobilenet.load().then(model => {
+    // Classify the image.
+    model.classify(img3).then(predictions => {
+      console.log('Predictions: ');
+      console.log(predictions);
+    });
+  });
+  
+  // Test
+  
 </script>
 </body>
 
