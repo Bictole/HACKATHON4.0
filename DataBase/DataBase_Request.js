@@ -8,7 +8,8 @@ function make_request(word){
            
     
     var l = new Array();
-    var res = l.concat(parser_json(result.raw_body));
+    var k = parser_json(result.raw_body);
+    var res = l.concat(k);
     
     return res;
     });
@@ -35,7 +36,7 @@ function parser_json(path){
         }
     }
 
-    return (l,a);
+    return l;
 }
 
 
